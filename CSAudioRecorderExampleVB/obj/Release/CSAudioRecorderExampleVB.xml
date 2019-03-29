@@ -1,0 +1,163 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CSAudioRecorderExampleVB
+</name>
+</assembly>
+<members>
+<member name="T:CSAudioRecorderExampleVB.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:CSAudioRecorderExampleVB.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:CSAudioRecorderExampleVB.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:CSAudioRecorderExampleVB.frmAudioRecorder.frmAudioRecorder_Load(System.Object,System.EventArgs)">
+ <summary>
+ Form Load.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:CSAudioRecorderExampleVB.frmAudioRecorder.cboRecorderMode_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ Get and set the audio devices according to the capture mode.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:CSAudioRecorderExampleVB.frmAudioRecorder.EnableDisableControls(System.Boolean)">
+ <summary>
+ Enable or disable the recording buttons.
+ </summary>
+ <param name="state"></param>
+</member>
+<member name="M:CSAudioRecorderExampleVB.frmAudioRecorder.AudioRecorder1_RecordDone(System.Object,System.EventArgs)">
+ <summary>
+ When done event.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:CSAudioRecorderExampleVB.frmAudioRecorder.AudioRecorder1_RecordError(System.Object,CSAudioRecorder.MessageArgs)">
+ <summary>
+ On error event.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:CSAudioRecorderExampleVB.frmAudioRecorder.AudioRecorder1_RecordProgress(System.Object,CSAudioRecorder.ProgressArgs)">
+ <summary>
+ On progress event.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:CSAudioRecorderExampleVB.frmAudioRecorder.AudioRecorder1_RecordStart(System.Object,System.EventArgs)">
+ <summary>
+ On start event.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:CSAudioRecorderExampleVB.frmAudioRecorder.SetDestinationFileName">
+ <summary>
+ Set the destination file. This example use the default music folder of Windows.
+ </summary>
+</member>
+<member name="M:CSAudioRecorderExampleVB.frmAudioRecorder.cmdRecord_Click(System.Object,System.EventArgs)">
+ <summary>
+ Start to record.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:CSAudioRecorderExampleVB.frmAudioRecorder.cmdStop_Click(System.Object,System.EventArgs)">
+ <summary>
+ Stop the recording operation.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:CSAudioRecorderExampleVB.frmAudioRecorder.cmdPause_Click(System.Object,System.EventArgs)">
+ <summary>
+ Pause the recording operation.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:CSAudioRecorderExampleVB.frmAudioRecorder.cmdUnPause_Click(System.Object,System.EventArgs)">
+ <summary>
+ UnPause the recording operation.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:CSAudioRecorderExampleVB.frmAudioRecorder.tmrMeterIn_Tick(System.Object,System.EventArgs)">
+ <summary>
+ Timer tick to get the meter. You can also get the meter value in RecordProgress event.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:CSAudioRecorderExampleVB.frmAudioRecorder.cboDestinationFormat_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ When selecting the ACM WAV format, display the ACM Tags and Formats.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:CSAudioRecorderExampleVB.frmAudioRecorder.cmdOpenFileLocation_Click(System.Object,System.EventArgs)">
+ <summary>
+ Open the windows explorer of the file location.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:CSAudioRecorderExampleVB.frmAudioRecorder.cboACMTags_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ Get ACM formats according to the selected tag.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:CSAudioRecorderExampleVB.frmAudioRecorder.cmdPlayWithDefaultPlayer_Click(System.Object,System.EventArgs)">
+ <summary>
+ Open the destination multimedia file with the default multimedia player of the system:
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:CSAudioRecorderExampleVB.frmAudioRecorder.frmAudioRecorder_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+ <summary>
+ On closing, check if the control is recording, if so, stop the recording operation before exit the program.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:CSAudioRecorderExampleVB.frmAudioRecorder.cmdID3Tags_Click(System.Object,System.EventArgs)">
+ <summary>
+ Show the frmID3TagsEditor.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:CSAudioRecorderExampleVB.frmAudioRecorder.cmdCheckLicense_Click(System.Object,System.EventArgs)">
+ <summary>
+ Check the license.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+</members>
+</doc>

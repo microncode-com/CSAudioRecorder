@@ -1,0 +1,1 @@
+﻿If audioRecorder1.CheckLicense() Then MessageBox.Show("Registration is OK")

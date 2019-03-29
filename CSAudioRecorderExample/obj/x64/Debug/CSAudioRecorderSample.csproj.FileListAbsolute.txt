@@ -1,0 +1,5 @@
+D:\MyCode\A\Apps\final\ReadyLib\include\libs\cscore-libs\cs-audio-recorder\CSAudioRecorder\CSAudioRecorderSample\obj\x64\Debug\CSAudioRecorderSample.csprojAssemblyReference.cache
+D:\MyCode\A\Apps\final\ReadyLib\include\libs\cscore-libs\cs-audio-recorder\CSAudioRecorder\CSAudioRecorderSample\obj\x64\Debug\CSAudioRecorderSample.frmMain.resources
+D:\MyCode\A\Apps\final\ReadyLib\include\libs\cscore-libs\cs-audio-recorder\CSAudioRecorder\CSAudioRecorderSample\obj\x64\Debug\CSAudioRecorderSample.Properties.Resources.resources
+D:\MyCode\A\Apps\final\ReadyLib\include\libs\cscore-libs\cs-audio-recorder\CSAudioRecorder\CSAudioRecorderSample\obj\x64\Debug\CSAudioRecorderSample.csproj.GenerateResource.cache
+D:\MyCode\A\Apps\final\ReadyLib\include\libs\cscore-libs\cs-audio-recorder\CSAudioRecorder\CSAudioRecorderSample\obj\x64\Debug\CSAudioRecorderSample.csproj.CoreCompileInputs.cache

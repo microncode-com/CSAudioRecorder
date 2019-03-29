@@ -1,0 +1,858 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CSAudioRecorder</name>
+    </assembly>
+    <members>
+        <member name="M:AudioConverterLib.cACM.PtrToStructure``1(System.IntPtr)">
+            <summary>
+            Pointer to Structure
+            </summary>
+        </member>
+        <member name="P:AudioConverterLib.cACMBridg.BufferSize">
+            <summary>
+            The buffer size of the conversion process. The default size is 1600 and the minimum size is 100.
+            </summary>
+            
+        </member>
+        <member name="P:CSAudioMeter.AudioMeter.ForeColor">
+            <summary>
+            The color of the meter.
+            </summary>
+        </member>
+        <member name="P:CSAudioMeter.AudioMeter.BackColor">
+            <summary>
+            The background color of the meter.
+            </summary>
+        </member>
+        <member name="P:CSAudioMeter.AudioMeter.Meter">
+            <summary>
+            The value of the meter. This can be a value from 0 to 1.
+            </summary>
+        </member>
+        <member name="M:CSAudioMeter.AudioMeter.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:CSAudioMeter.AudioMeter.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Set some APIs in order to control the color and the background color of the progress-bar.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="F:CSAudioMeter.AudioMeter.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CSAudioMeter.AudioMeter.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CSAudioMeter.AudioMeter.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:CSAudioRecorder.RecordingState">
+            <summary>
+            The recording state of the control. This can be Ready, Recording and Paused.
+            </summary>
+        </member>
+        <member name="T:CSAudioRecorder.Bitrate">
+            <summary>
+            The bitrate of the destination audio file.
+            </summary>
+        </member>
+        <member name="T:CSAudioRecorder.Samplerate">
+            <summary>
+            The samplerate of the destination audio file.
+            </summary>
+        </member>
+        <member name="T:CSAudioRecorder.Bits">
+            <summary>
+            The bit-depth of the destination audio file.
+            </summary>
+        </member>
+        <member name="T:CSAudioRecorder.Channels">
+            <summary>
+            The number of channels of the destination audio file.
+            </summary>
+        </member>
+        <member name="T:CSAudioRecorder.TagTypes">
+            <summary>
+            The tag types list.
+            </summary>
+        </member>
+        <member name="T:CSAudioRecorder.ACM_FORMAT">
+            <summary>
+            The ACM format mode. You can get the ACM codecs and fromat acording to the value of this enum.
+            </summary>
+        </member>
+        <member name="T:CSAudioRecorder.Format">
+            <summary>
+            The format of the destination file, this can be AAC, ACM (WAV), APE, MP2, MP3, OGG, WAV (PCM), and WMA.
+            </summary>
+        </member>
+        <member name="T:CSAudioRecorder.Mode">
+            <summary>
+            The recorder mode of the operation. this can be WasapiCapture, WasapiLoopbackCapture and LineIn.
+            </summary>
+        </member>
+        <member name="M:CSAudioRecorder.cAudioRecorderLineIn.backgroundWorker_ProgressChanged(System.Object,System.ComponentModel.ProgressChangedEventArgs)">
+            <summary>
+            Update the user interface with the current progress
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CSAudioRecorder.cAudioRecorderLineIn.backgroundWorker_RunWorkerCompleted(System.Object,System.ComponentModel.RunWorkerCompletedEventArgs)">
+            <summary>
+            Notification that the burn background thread has completed
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CSAudioRecorder.cAudioRecorderWasapi.backgroundWorker_ProgressChanged(System.Object,System.ComponentModel.ProgressChangedEventArgs)">
+            <summary>
+            Update the user interface with the current progress
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CSAudioRecorder.cAudioRecorderWasapi.backgroundWorker_RunWorkerCompleted(System.Object,System.ComponentModel.RunWorkerCompletedEventArgs)">
+            <summary>
+            Notification that the burn background thread has completed
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CSAudioRecorder.cAudioRecorderWasapi.SetupSampleSource(CSCore.ISampleSource)">
+            <summary>
+            
+            </summary>
+            <param name="aSampleSource"></param>
+        </member>
+        <member name="M:CSAudioRecorder.cAudioRecorderWasapiLookup.backgroundWorker_ProgressChanged(System.Object,System.ComponentModel.ProgressChangedEventArgs)">
+            <summary>
+            Update the user interface with the current progress
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CSAudioRecorder.cAudioRecorderWasapiLookup.backgroundWorker_RunWorkerCompleted(System.Object,System.ComponentModel.RunWorkerCompletedEventArgs)">
+            <summary>
+            Notification that the burn background thread has completed
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CSAudioRecorder.cAudioRecorderWasapiLookup.SetupSampleSource(CSCore.ISampleSource)">
+            <summary>
+            
+            </summary>
+            <param name="aSampleSource"></param>
+        </member>
+        <member name="F:CSAudioRecorder.ID3Editor.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CSAudioRecorder.ID3Editor.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CSAudioRecorder.ID3Editor.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.FileName">
+            <summary>
+            The title tag of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.Format">
+            <summary>
+            The format of the destination file, this can be AAC, ACM (WAV), APE, MP2, MP3, OGG, WAV (PCM), and WMA.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.Bitrate">
+            <summary>
+            The bitrate of the destination audio file.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.BitrateVal">
+            <summary>
+            Set the bitrate of the destination audio file by value.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.Samplerate">
+            <summary>
+            The samplerate of the destination audio file.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.SamplerateVal">
+            <summary>
+            The samplerate of the destination audio file by value.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.Bits">
+            <summary>
+            The bit-depth of the destination audio file (for WAV format only).
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.Channels">
+            <summary>
+            The channels of the destination audio file.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.Mode">
+            <summary>
+            The mode of the capturing process. This can be WasapiLoopbackCapture (default), WasapiCapture or LineIn.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.AudioSource">
+            <summary>
+            The audio device source.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.DeviceIndex">
+            <summary>
+            The audio source device.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.AudioVisualization">
+            <summary>
+            The PictureBox control of the visualization.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.AudioMeter">
+            <summary>
+            The PictureBox control of the visualization.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.Latency">
+            <summary>
+            The audio source device.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.StartOnNoise">
+            <summary>
+            Start to record when noise is detected.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.StartOnNoiseVal">
+            <summary>
+            The noise value of the meter to start to record when noise is detected.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.StopOnSilence">
+            <summary>
+            Stop to record when silence is detected.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.StopOnSilenceVal">
+            <summary>
+            The maximum noise value of the meter to start the timer to stop the record process.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.StopOnSilenceSeconds">
+            <summary>
+            The number of seconds to detect the silence before stopping the record process.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.DeleteEmptyRecordedFile">
+            <summary>
+            Delete or not a recorded file that empty in the end of the recording process
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.ACMTag">
+            <summary>
+            The selected ACM tag (for ACM encoding). The default tag is PCM.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.ACMFormat">
+            <summary>
+            The selected ACM format of the selected ACM tag(for ACM encoding). The default format is 44.100 kHz, 16 Bit, Stereo.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.TotalTimeIn">
+            <summary>
+            The total time of the recorded audio file.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.TotalSizeIn">
+            <summary>
+            The total size of the recorded audio file. This will return the size in Bytes, KB, MB, GB, TB, PB, EB, ZB or YB.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.RecordingState">
+            <summary>
+            The recording state of the control. This can be Ready, Recording and Paused.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.UserName">
+            <summary>
+            The user name.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.UserKey">
+            <summary>
+            The user key.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.TagComposers">
+            <summary>
+            A list of strings for the TagComposers of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.TagArtists">
+            <summary>
+            A list of strings for the TagArtists of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.TagPerformers">
+            <summary>
+            A list of strings for the TagPerformers of the opened multimedia file. In some cases this tag will be the TagArtists tag.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.TagGenres">
+            <summary>
+            A list of strings for the TagGenres of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.TagImages">
+            <summary>
+            A list of ImageTag class for the TagImages of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.FileNameID3Tags">
+            <summary>
+            The file name of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.TagTitle">
+            <summary>
+            The TagTitle tag of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.TagLyrics">
+            <summary>
+            The lyrics of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.TagAlbum">
+            <summary>
+            The album name of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.TagComment">
+            <summary>
+            The comment of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.TagCopyright">
+            <summary>
+            The copyright of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.TagYear">
+            <summary>
+            The created year of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.TagTrack">
+            <summary>
+            The Track number of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.TagRating">
+            <summary>
+            The rating value of the opened multimedia file. This value can be 0 (unrated) to 255 (best).
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.RatingUser">
+            <summary>
+            The user of the rating tag. The default value is: "Windows Media Player 9 Series".
+            </summary>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.CheckLicense(System.Boolean)">
+            <summary>
+            Check the user license of the component. 
+            </summary>
+            <param name="DisplayRegistrationWindow">Display the registration form or not.</param>
+            <returns>True if the license is OK, false if not.</returns>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.RaiseError(System.Exception)">
+            <summary>
+            Raise an error
+            </summary>
+            <param name="ex">The error exception</param>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.onRecordDone(System.Object,System.EventArgs)">
+            <summary>
+            When done.
+            </summary>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.onRecordStart(System.Object,System.EventArgs)">
+            <summary>
+            When Start.
+            </summary>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.onRecordProgress(System.Object,CSAudioRecorder.ProgressArgs)">
+            <summary>
+            When Start.
+            </summary>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.Start">
+            <summary>
+            Start the record operation.
+            </summary>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.RecordStopped">
+            <summary>
+            When the record process has done.
+            </summary>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.Stop">
+            <summary>
+            Stop the record operation.
+            </summary>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.Pause">
+            <summary>
+            Pause the record operation.
+            </summary>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.UnPause">
+            <summary>
+            Unpause the record operation.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.AudioRecorder.RatingStars">
+            <summary>
+            The rating stars of the opened multimedia file. This value can be 0 (unrated) to 5 (best).
+            </summary>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.ClearAllTags(System.String)">
+            <summary>
+            Clear all the tags of the selected multimedia file.
+            </summary>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.ClearTag(System.String,CSAudioRecorder.TagTypes)">
+            <summary>
+            Remove a tag type from the opened multimedia file.
+            </summary>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.OpenID3Tags(System.String)">
+            <summary>
+            Open a multimedia file. You can add/get/set tags only after calling this function. The supported format are: avi, mp3, mpc, mp4, asf, aiff, aif, aifc, tta, wv, ogg, flac, spx, opus, ape, xiph, wma, jpg, jpeg, png, mpg, mpeg and many other multimedia files.
+            </summary>
+            <param name="file_name"></param>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.SetID3Tags(System.String)">
+            <summary>
+            Set the ID3 tags to the opened multimedia files.
+            </summary>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.AddImageFromFile(System.String,System.String,CSID3TagsLib.ImageType)">
+            <summary>
+            Set the ID3 tags to the opened multimedia files.
+            </summary>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.GetDeviceDefaultIndex(CSAudioRecorder.Mode)">
+            <summary>
+            Get the default input device index. This works when the mode of the recorder is on WASAPI.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.GetModes">
+            <summary>
+            Get the supported recorder modes to a list.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.GetChannels">
+            <summary>
+            Get the supported channels to a list.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.GetBits">
+            <summary>
+            Get the supported bits to a list.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.GetSamplerates">
+            <summary>
+            Get the supported samplerates to a list.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.GetFormats">
+            <summary>
+            Get the supported formats to a list.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.GetBitrates">
+            <summary>
+            Get the supported bitrates to a list.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.GetDevices(CSAudioRecorder.Mode)">
+            <summary>
+            Get the all audio devices that installed on the local machine according to the capture mode.
+            </summary>
+            <param name="mode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.GetACMTags(CSAudioRecorder.ACM_FORMAT,System.Int32,System.Int32,System.Int16,System.Int16)">
+            <summary>
+            Get ACM tags according to the ACMFormat. You can also set the audio propitiates to get the best results according to the source audio file.
+            </summary>
+            <param name="ACMFormat"></param>
+            <param name="FormatTag"></param>
+            <param name="SamplesPerSec"></param>
+            <param name="Channels"></param>
+            <param name="BitsPerSample"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.GetACMFormats(System.String)">
+            <summary>
+            Get the ACM formats according to the ACMTag.
+            </summary>
+            <param name="ACMTag">The ACM codec tag to get the supported formats for.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.GetEnumValue(System.Enum)">
+            <summary>
+            Get the value of the selected item of the Enum
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.GetEnumValue``1(System.String)">
+            <summary>
+            Get the value of the selected item of the Enum
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="F:CSAudioRecorder.AudioRecorder.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CSAudioRecorder.AudioRecorder.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:CSAudioRecorder.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:CSAudioRecorder.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:CSID3TagsLib.ImageType">
+            <summary>
+            The image type of the image tag. This can be: Other, FileIcon, OtherFileIcon, FrontCover, BackCover, LeafletPage, Media, LeadArtist, Artist, Conductor, Band, Composer, Lyricist, RecordingLocation, DuringRecording, DuringPerformance, MovieScreenCapture, ColoredFish, Illustration, BandLogo and PublisherLogo.
+            </summary>
+        </member>
+        <member name="T:CSID3TagsLib.TagTypes">
+            <summary>
+            The tag types list.
+            </summary>
+        </member>
+        <member name="P:CSID3TagsLib.ID3TagsLib.TagComposers">
+            <summary>
+            A list of strings for the TagComposers of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSID3TagsLib.ID3TagsLib.TagArtists">
+            <summary>
+            A list of strings for the TagArtists of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSID3TagsLib.ID3TagsLib.TagPerformers">
+            <summary>
+            A list of strings for the TagPerformers of the opened multimedia file. In some cases this tag will be the TagArtists tag.
+            </summary>
+        </member>
+        <member name="P:CSID3TagsLib.ID3TagsLib.TagGenres">
+            <summary>
+            A list of strings for the TagComposers of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSID3TagsLib.ID3TagsLib.TagImages">
+            <summary>
+            A list of ImageTag class for the TagImages of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSID3TagsLib.ID3TagsLib.FileName">
+            <summary>
+            The file name of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSID3TagsLib.ID3TagsLib.TagTitle">
+            <summary>
+            The TagTitle tag of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSID3TagsLib.ID3TagsLib.TagLyrics">
+            <summary>
+            The lyrics of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSID3TagsLib.ID3TagsLib.TagAlbum">
+            <summary>
+            The album name of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSID3TagsLib.ID3TagsLib.TagComment">
+            <summary>
+            The comment of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSID3TagsLib.ID3TagsLib.TagCopyright">
+            <summary>
+            The copyright of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSID3TagsLib.ID3TagsLib.TagYear">
+            <summary>
+            The created year of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSID3TagsLib.ID3TagsLib.TagTrack">
+            <summary>
+            The Track number of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSID3TagsLib.ID3TagsLib.FileProperties">
+            <summary>
+            The properties of the opened multimedia file.
+            </summary>
+        </member>
+        <member name="P:CSID3TagsLib.ID3TagsLib.RatingStars">
+            <summary>
+            The rating stars of the opened multimedia file. This value can be 0 (unrated) to 5 (best).
+            </summary>
+        </member>
+        <member name="P:CSID3TagsLib.ID3TagsLib.TagRating">
+            <summary>
+            The rating value of the opened multimedia file. This value can be 0 (unrated) to 255 (best).
+            </summary>
+        </member>
+        <member name="P:CSID3TagsLib.ID3TagsLib.RatingUser">
+            <summary>
+            The user of the rating tag. The default value is: "Windows Media Player 9 Series".
+            </summary>
+        </member>
+        <member name="M:CSID3TagsLib.ID3TagsLib.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:CSID3TagsLib.ID3TagsLib.ClearAllTags">
+            <summary>
+            Clear all the tags of the selected multimedia file.
+            </summary>
+        </member>
+        <member name="M:CSID3TagsLib.ID3TagsLib.ClearTag(CSID3TagsLib.TagTypes)">
+            <summary>
+            Remove a tag type from the opened multimedia file.
+            </summary>
+        </member>
+        <member name="M:CSID3TagsLib.ID3TagsLib.Init(System.String)">
+            <summary>
+            Init the library with your registration key. Use 'Trial Mode.' on trial. This function must be call before using any functionality of the library.
+            </summary>
+            <param name="sKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CSID3TagsLib.ID3TagsLib.Open(System.String)">
+            <summary>
+            Open a multimedia file. You can add/get/set tags only after calling this function. The supported format are: avi, mp3, mpc, mp4, asf, aiff, aif, aifc, tta, wv, ogg, flac, spx, opus, ape, xiph, wma, jpg, jpeg, png, mpg, mpeg and many other multimedia files.
+            </summary>
+            <param name="file_name"></param>
+        </member>
+        <member name="M:CSID3TagsLib.ID3TagsLib.Set">
+            <summary>
+            Set the ID3 tags to the opened multimedia files.
+            </summary>
+        </member>
+        <member name="M:CSID3TagsLib.ID3TagsLib.AddImageFromFile(System.String,System.String,CSID3TagsLib.ImageType)">
+            <summary>
+            Set the ID3 tags to the opened multimedia files.
+            </summary>
+        </member>
+        <member name="F:CSID3TagsLib.ID3TagsLib.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CSID3TagsLib.ID3TagsLib.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CSID3TagsLib.ID3TagsLib.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:Microncode.Lic.frmLicense.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Microncode.Lic.frmLicense.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Microncode.Lic.frmLicense.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Microncode.Lic.LicenseLib.CheckLicense(System.Windows.Forms.IWin32Window,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Check the license of the library. If the registration is OK a MessageBox will be display with a message 'The registration is OK.', otherwise, a registration window will be display with an instructions of register the library.
+            </summary>
+        </member>
+        <member name="T:Options.Core.FileSelectorTypeEditor">
+            <summary>
+            Customer UITypeEditor that pops up a
+            file selector dialog
+            </summary>
+        </member>
+        <member name="T:Options.Core.ListTypeConverterIn">
+            <summary>
+            Get input device type
+            </summary>
+        </member>
+        <member name="T:Options.Core.ListTypeConverterOut">
+            <summary>
+            Get output device type
+            </summary>
+        </member>
+        <member name="P:WinformsVisualization.Visualization.AudioVisualization.ColorBase">
+            <summary>
+            The base color of the AudioVisualization.
+            </summary>
+        </member>
+        <member name="P:WinformsVisualization.Visualization.AudioVisualization.ColorMax">
+            <summary>
+            The max color of the AudioVisualization.
+            </summary>
+        </member>
+        <member name="P:WinformsVisualization.Visualization.AudioVisualization.HighQuality">
+            <summary>
+            The quality of the AudioVisualization.
+            </summary>
+        </member>
+        <member name="P:WinformsVisualization.Visualization.AudioVisualization.Interval">
+            <summary>
+            The interval value of the timer of the AudioVisualization.
+            </summary>
+        </member>
+        <member name="P:WinformsVisualization.Visualization.AudioVisualization.UseAverage">
+            <summary>
+            The UseAverage of the AudioVisualization.
+            </summary>
+        </member>
+        <member name="P:WinformsVisualization.Visualization.AudioVisualization.BarCount">
+            <summary>
+            The number of bars of the AudioVisualization.
+            </summary>
+        </member>
+        <member name="P:WinformsVisualization.Visualization.AudioVisualization.BarSpacing">
+            <summary>
+            The bar spacing of the AudioVisualization.
+            </summary>
+        </member>
+        <member name="P:WinformsVisualization.Visualization.AudioVisualization.IsXLogScale">
+            <summary>
+            The IsXLogScale of the AudioVisualization.
+            </summary>
+        </member>
+        <member name="P:WinformsVisualization.Visualization.AudioVisualization.MaximumFrequency">
+            <summary>
+            The maximum frequency of the AudioVisualization.
+            </summary>
+        </member>
+        <member name="M:WinformsVisualization.Visualization.AudioVisualization.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:WinformsVisualization.Visualization.AudioVisualization.AudioVisualization_Load(System.Object,System.EventArgs)">
+            <summary>
+            Form load event
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:WinformsVisualization.Visualization.AudioVisualization.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WinformsVisualization.Visualization.AudioVisualization.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WinformsVisualization.Visualization.AudioVisualization.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:WinformsVisualization.Visualization.BasicSpectrumProvider">
+            <summary>
+                BasicSpectrumProvider
+            </summary>
+        </member>
+    </members>
+</doc>
