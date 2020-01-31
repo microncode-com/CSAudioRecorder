@@ -1,7 +1,7 @@
 # CSAudioRecorder
 .NET component to record audio from any source to many types of audio files.
 
-![alt CSAudioRecorder](https://www.microncode.com/developers/cs-audio-recorder/images/cs-audio-recorder.png "CSAudioRecorder")
+![alt CSAudioRecorder](https://www.microncode.com/images/developers/cs-audio-recorder/images/cs-audio-recorder.png "CSAudioRecorder")
 
 # About
 The CSAudioRecorder is a .NET component that can record audio from any source to AAC, APE, MP2, MP3, OGG, ACM WAV, PCM WAV and WMA audio files with a specific format, with a built in audio visualization / audio meter controls and a built in ID3 tags editor.
